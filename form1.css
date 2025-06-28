@@ -1,0 +1,86 @@
+.ash {
+    background-image: url("https://media.istockphoto.com/id/1049681110/photo/christmas-snowflakes-on-red-background.jpg?s=2048x2048&w=is&k=20&c=iDFBwbJ37O-57JY4QEt9-N5mPMbII7NAEe8kNL1ZM2k=");
+    margin: 20px auto;
+    padding: 40px;
+    border: double 4px aqua;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 700px;
+    border-radius: 15px;
+}
+
+body {
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* fallback if image doesn't load */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    text-align: left;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    width: 160px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    width: calc(100% - 180px);
+    max-width: 400px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+button {
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 160px;
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cccc;
+}
+

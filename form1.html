@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register Form</title>
+    <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+    <div class="ash">
+        <img src="https://media.istockphoto.com/id/1049681110/photo/christmas-snowflakes-on-red-background.jpg?s=2048x2048&w=is&k=20&c=iDFBwbJ37O-57JY4QEt9-N5mPMbII7NAEe8kNL1ZM2k=" alt="Logo">
+        <h1><center>Student Register Form</center></h1>
+        <br>
+        <div class="ash">
+            <center>
+                <form>
+                    <div>
+                        <label for="number">ID:</label>
+                        <input type="number" id="number" placeholder="Enter the number">
+                    </div><br>
+                    <div>
+                        <label for="text">Name:</label>
+                        <input type="text" id="text" placeholder="Enter the name" maxlength="20">
+                    </div><br>
+                    <div>
+                        <label>Gender:</label>
+                        <input type="radio" id="male" name="Gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="Gender" value="female">
+                        <label for="female">Female</label>
+                    </div><br>
+                    <div>
+                        <label for="learning">Learning Language:</label>
+                        <input type="checkbox" id="python" name="language" value="python">
+                        <label for="python">Python</label>
+                        <input type="checkbox" id="java" name="language" value="java">
+                        <label for="java">Java</label>
+                      
+                    </div><br>
+                    <div>
+                        <label for="email">Email ID:</label>
+                        <input type="email" id="email" placeholder="Enter the email">
+                    </div><br>
+                    <div>
+                        <label for="pass">Password:</label>
+                        <input type="password" id="pass" placeholder="Enter the Password" maxlength="12" required>
+                    </div><br>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="number" id="phone" placeholder="Mobile number">
+                    </div><br>
+                    <div>
+                        <label>District:</label>
+                        <select>
+                            <option>Krishnagiri</option>
+                            <option>Dharmapuri</option>
+                            <option>Thirupathur</option>
+                            <option>Ambur</option>
+                        </select>
+                    </div><br>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
