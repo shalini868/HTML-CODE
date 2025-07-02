@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodiez – Local Food Delivery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 0 100px 0;
+      background-color: #f9f9f9;
+    }
+
+    .status-bar {
+      height: 20px;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #ffe5b4;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #ff6f00;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header::before {
+      content: "🍽️ ";
+    }
+
+    .location-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 0;
+      background-color: #fff;
+    }
+
+    .location-text {
+      background-color: #ffefdb;
+      color: #ff6f00;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      background-color: #fff;
+    }
+
+    .search-bar {
+      width: 75%;
+      max-width: 300px;
+      display: flex;
+      background-color: #eee;
+      border-radius: 25px;
+      padding: 6px 12px;
+      align-items: center;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      flex: 1;
+      padding-left: 8px;
+      font-size: 14px;
+    }
+
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .filter-row, .nearby-restaurants {
+      padding: 10px;
+    }
+
+    .restaurant-card {
+      background-color: #fff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .restaurant-card img {
+      border-radius: 50%;
+      width: 148px;
+      height: 148px;
+      object-fit: cover;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background-color: #fff;
+      padding: 12px 0;
+      border-top: 1px solid #ddd;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
+      z-index: 100;
+    }
+
+    .bottom-nav div {
+      text-align: center;
+      color: gray;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .bottom-nav .active {
+      color: #ff6f00;
+      font-weight: bold;
+    }
+
+    .bottom-nav div:hover {
+      color: #ff6f00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="status-bar"></div>
+  <div class="header">Foodiez</div>
+
+  <div class="location-bar">
+    <div class="location-text">📍 Los Angeles, CA</div>
+  </div>
+
+  <div class="search-container">
+    <div class="search-bar">
+      🔍 <input type="text" placeholder="Search restaurants or dishes..." />
+    </div>
+  </div>
+
+  
+  <div class="grid-section">
+    <div class="card">
+      <strong>Sushi Master</strong><br />
+      <small>20–30 min • $$ • Free delivery</small><br />
+      <img src="https://cdn.pixabay.com/photo/2022/08/02/07/30/pizza-7359753_1280.jpg" alt="Sushi" />
+    </div>
+    <div class="card">
+      <strong>Pizza Mia</strong><br />
+      <small>20–30 min • $ • Free delivery</small><br />
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_1280.jpg" alt="Pizza" />
+    </div>
+    <div class="card">
+      <strong>Spicy Biryani</strong><br />
+      <small>30–40 min • $$ • Free delivery</small><br />
+      <img src="https://cdn.pixabay.com/photo/2023/06/04/17/45/biryani-8041686_1280.jpg" alt="Biryani" />
+    </div>
+  </div>
+
+
+  <div class="filter-row">
+    <center>
+      <h4><label>Delivery Time: <select><option>Under 30 min</option></select></label></h4>
+      <h4><label>Cuisine: <select><option>All Types</option></select></label></h4>
+      <h4><label>Rating: <select><option>4+ stars</option></select></label></h4>
+    </center>
+  </div>
+
+
+  <div class="nearby-restaurants">
+    <div class="restaurant-card">
+      <img src="https://cdn.pixabay.com/photo/2021/09/12/18/13/pizza-6619201_1280.jpg" alt="Burger Zone">
+      <div>
+        <strong>Burger Zone</strong><br />
+        <small>Burgers • 20–25 min</small><br />
+        ⭐ 4.7
+      </div>
+      <div style="margin-left:auto;">♡</div>
+    </div>
+    <div class="restaurant-card">
+      <img src="https://cdn.pixabay.com/photo/2015/02/13/11/04/pizza-634967_1280.jpg" alt="Taco House">
+      <div>
+        <strong>Taco House</strong><br />
+        <small>Mexican • 15–20 min</small><br />
+        ⭐ 4.5
+      </div>
+      <div style="margin-left:auto;">♡</div>
+    </div>
+  </div>
+
+  <div class="bottom-nav">
+    <div class="active">🏠<br />Home</div>
+    <div>🔍<br />Search</div>
+    <div>🛒<br />Orders</div>
+    <div>👤<br />Profile</div>
+  </div>
+
+</body>
+</html>
+
+
+
